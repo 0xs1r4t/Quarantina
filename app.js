@@ -37,7 +37,7 @@ app.post('/send-msg',(req, res)=>{
 async function runSample(msg, projectId = 'quarantina-nqrpht') {
   // Create a new session
   const sessionClient = new dialogflow.SessionsClient({
-      keyFilename: '/home/wtf_minseok/Desktop/QUARANTINA/Quarantina-f322851573d3.json'
+      keyFilename: '/home/wtf_minseok/Desktop/Quarantina/Quarantina-f322851573d3.json'
 });
   const sessionPath = sessionClient.sessionPath(projectId, sessionId);
 
@@ -70,14 +70,14 @@ async function runSample(msg, projectId = 'quarantina-nqrpht') {
 
 // make all the files in 'public' available
 // https://expressjs.com/en/starter/static-files.html
-app.use(express.static("ui"));
+app.use(express.static("/home/wtf_minseok/Desktop/Quarantina/ui"));
 
 // https://expressjs.com/en/starter/basic-routing.html
 app.get("/", (req, res) => {
-    res.sendFile("./ui/js/index.js");
+    res.sendFile("/home/wtf_minseok/Desktop/Quarantina/ui/js/index.js");
   });
 
 // listen for requests :)
-const listener = app.listen(process.env.PORT, function() {
+const listener = app.listen(port, function() {
     console.log('Your app is listening on port ' + listener.address().port);
-  });
+});

@@ -3,12 +3,6 @@
   "version": "1.0.0",
   "description": "Quarantina is an emotional support bot crafted for your quarantine needs!",
   "main": "index.js",
-  "keywords": [
-    "heroku",
-    "node",
-    "express",
-    "dialogflow"
-  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sBx99/Quarantina.git"
@@ -20,20 +14,14 @@
   },
   "homepage": "https://github.com/sBx99/Quarantina#readme",
   "dependencies": {
-    "actions-on-google": "^2.1.3",
     "body-parser": "^1.19.0",
-    "bower": "^1.8.8",
-    "build": "^0.1.4",
-    "dialogflow": "^1.2.0",
-    "dialogflow-fulfillment": "^0.5.0",
     "express": "^4.17.1",
     "googleapis": "^49.0.0",
     "uuid": "^7.0.3"
   },
   "engines": {
-    "node": "13.12.0",
-    "vscode": "^1.22.0",
-    "npm": "6.14.4"
+    "node": "^13.12.0",
+    "npm": "^6.14.4"
   },
   "scripts": {
     "start": "node app.js"

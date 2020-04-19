@@ -1,8 +1,10 @@
+import { response } from "express";
+
 var $messages = $('.messages-content');
 var serverResponse = "wala";
 
 var suggession;
-//speech reco
+//speech recognition
 try {
   var SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
   var recognition = new SpeechRecognition();
@@ -100,7 +102,7 @@ function fetchmsg(){
         fetch(url, {
           method: 'POST',
           body:data
-        }).then(res => res.json())
+        }).then(response => response.json())
          .then(response => {
           console.log(response);
           serverMessage(response.Reply);
@@ -108,6 +110,5 @@ function fetchmsg(){
           
          })
           .catch(error => console.error('Error h:', error));
-
 }
 
