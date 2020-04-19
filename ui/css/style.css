@@ -10,7 +10,7 @@ tab-size:4;
   box-sizing: border-box;
   --bot-color: #F2F2F2;
   --bot-font-color: black;
-  --user-color: #DC86F2;
+  --user-color: #dc86f2;
   --user-font-color: white;
   --bg-color: #3649AA;
   --msg-font-size: 14px;
@@ -22,7 +22,7 @@ body {
 }
 
 body {
-  background: white;
+  background: #dc86f2;
   background-size: cover;
   font-family: monospace;
   font-size: 24px;
