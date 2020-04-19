@@ -35,9 +35,11 @@ function listendom(no){
 $(window).load(function() {
   $messages.mCustomScrollbar();
   setTimeout(function() {
-    serverMessage("message me please!");
-    speechSynthesis.speak(new SpeechSynthesisUtterance("message me please!"));
-  }, 180);
+    serverMessage("message me please! i probably won't work properly so you can try me out <a href='dialog.html'>here</a>.");
+    speechSynthesis.speak(new SpeechSynthesisUtterance("message me please! i probably won't work properly so you can try me out here"));
+    serverMessage("I was created by <a href='https://github.com/sBx99'>Sirat</a> and <a href='https://github.com/one-she-kaaaa'>Vanshika</a>");
+    speechSynthesis("I was created by these people by I won't say their name since I will probably butcher their pronunciations.");
+  }, 60);
 
 });
 
