@@ -8,11 +8,11 @@ tab-size:4;
 *::before,
 *::after {
   box-sizing: border-box;
-  --bot-color: rgb(0, 0, 0, 0.05);
+  --bot-color: #F2F2F2;
   --bot-font-color: black;
-  --user-color: rgba(255, 46, 192, 0.644);
+  --user-color: #DC86F2;
   --user-font-color: white;
-  --bg-color: white;
+  --bg-color: #3649AA;
   --msg-font-size: 14px;
 }
 
