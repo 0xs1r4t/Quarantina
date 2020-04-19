@@ -32,18 +32,6 @@ function listendom(no){
   insertMessage();
 }
 
-// make scrollbar non-passive
-jQuery.event.special.touchstart = {
-  setup: function( _, ns, handle ){
-    if ( ns.includes("noPreventDefault") ) {
-      this.addEventListener("touchstart", handle, { passive: false });
-    } else {
-      this.addEventListener("touchstart", handle, { passive: true });
-    }
-  }
-};
-
-
 
 $(window).load(function() {
   $messages.mCustomScrollbar();
