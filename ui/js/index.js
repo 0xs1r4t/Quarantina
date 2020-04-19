@@ -1,7 +1,6 @@
-import { response } from "express";
-
 var $messages = $('.messages-content');
 var serverResponse = "wala";
+var app = "app";
 
 var suggession;
 //speech recognition
@@ -20,16 +19,16 @@ $('#start-record-btn').on('click', function(e) {
 
 recognition.onresult = (event) => {
   const speechToText = event.results[0][0].transcript;
- document.getElementById("MSG").value= speechToText;
-  //console.log(speechToText)
+  document.getElementById("MSG").value= speechToText;
+  console.log(speechToText)
   insertMessage()
 }
 
 
 function listendom(no){
   console.log(no)
-  //console.log(document.getElementById(no))
-document.getElementById("MSG").value= no.innerHTML;
+  console.log(document.getElementById(no))
+  document.getElementById("MSG").value= no.innerHTML;
   insertMessage();
 }
 
@@ -37,7 +36,8 @@ $(window).load(function() {
   $messages.mCustomScrollbar();
   setTimeout(function() {
     serverMessage("message me please!");
-  }, 100);
+    speechSynthesis.speak(new SpeechSynthesisUtterance("message me please!"));
+  }, 180);
 
 });
 
@@ -66,6 +66,8 @@ function insertMessage() {
 document.getElementById("mymsg").onsubmit = (e)=>{
   e.preventDefault() 
   insertMessage();
+  //serverMessage();
+  //speechSynthesis.speak(new SpeechSynthesisUtterance());
   
 }
 
@@ -90,7 +92,7 @@ function serverMessage(response2) {
 
 function fetchmsg(){
 
-     var url = 'http://localhost:5000/send-msg';
+     var url = '/send-msg';
       
       const data = new URLSearchParams();
       for (const pair of new FormData(document.getElementById("mymsg"))) {
@@ -102,7 +104,9 @@ function fetchmsg(){
         fetch(url, {
           method: 'POST',
           body:data
-        }).then(response => response.json())
+        }).then(res => {
+          return res.json();
+        })
          .then(response => {
           console.log(response);
           serverMessage(response.Reply);

@@ -27,6 +27,7 @@ app.use(function (req, res, next) {
 
 app.post('/send-msg',(req, res)=>{
     runSample(req.body.MSG).then(data=>{
+      res.send({Reply:data})
     })
 })
 
@@ -70,11 +71,11 @@ async function runSample(msg, projectId = 'quarantina-nqrpht') {
 
 // make all the files in 'public' available
 // https://expressjs.com/en/starter/static-files.html
-app.use(express.static("/home/wtf_minseok/Desktop/Quarantina/ui"));
+app.use(express.static("ui"));
 
 // https://expressjs.com/en/starter/basic-routing.html
 app.get("/", (req, res) => {
-    res.sendFile("/home/wtf_minseok/Desktop/Quarantina/ui/js/index.js");
+    res.sendFile(__dirname + "ui/js/index.js");
   });
 
 // listen for requests :)
