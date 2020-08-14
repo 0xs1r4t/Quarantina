@@ -72,11 +72,11 @@ async function runSample(msg, projectId = 'quarantina-nqrpht') {
 
 // make all the files in 'public' available
 // https://expressjs.com/en/starter/static-files.html
-app.use(express.static("ui"));
+app.use(express.static(""));
 
 // https://expressjs.com/en/starter/basic-routing.html
 app.get("/", (req, res) => {
-    res.sendFile(__dirname + "ui/js/index.js");
+    res.sendFile(__dirname + "js/index.js");
   });
 
 // listen for requests :)
