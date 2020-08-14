@@ -2,3 +2,7 @@
 /.vscode
 qt.json
 package-lock.json
+/.firebase
+.firebaserc
+firebase.json
+/ui
