@@ -39,7 +39,7 @@ app.post('/send-msg',(req, res)=>{
 async function runSample(msg, projectId = 'quarantina-nqrpht') {
   // Create a new session
   const sessionClient = new dialogflow.SessionsClient({
-      keyFilename: '/home/wtf_minseok/Desktop/Quarantina/Quarantina-f322851573d3-lock.json'
+      keyFilename: '/home/wtf_minseok/Desktop/Quarantina/qt.json'
 });
   const sessionPath = sessionClient.sessionPath(projectId, sessionId);
 
