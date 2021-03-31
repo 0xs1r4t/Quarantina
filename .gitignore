@@ -1,8 +1,9 @@
-/node_modules
-/.vscode
+node_modules/
+.vscode/
+.next/
 qt.json
 package-lock.json
-/.firebase
-.firebaserc
+.firebase/
+.firebaserc/
 firebase.json
-/ui
+ui/
