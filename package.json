@@ -1,35 +1,78 @@
 {
-  "name": "quarantina",
-  "version": "1.0.0",
-  "description": "Quarantina is an emotional support bot crafted for your quarantine needs!",
-  "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/sBx99/Quarantina.git"
-  },
-  "author": "Sirat Baweja, Vanshika Nigam",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/sBx99/Quarantina/issues"
-  },
-  "homepage": "https://github.com/sBx99/Quarantina#readme",
-  "dependencies": {
-    "actions-on-google": "^2.12.0",
-    "body-parser": "^1.19.0",
-    "dialogflow": "^1.2.0",
-    "express": "^4.17.1",
-    "google-auth-library": "^6.0.6",
-    "grpcjs": "^1.0.2",
-    "uuid": "^7.0.3"
-  },
-  "engines": {
-    "node": "^13.12.0",
-    "npm": "^6.14.4"
-  },
-  "scripts": {
-    "start": "node app.js",
-    "start_azure_debug": "node --inspect=0.0.0.0:$APPSVC_TUNNEL_PORT app.js",
-    "deploy": "gh-pages-deploy -- 'deployed!'"
-  },
-  "devDependencies": {}
+   "name": "quarantina",
+   "version": "0.1.0",
+   "private": true,
+   "scripts": {
+      "dev": "next dev",
+      "build": "next build",
+      "start": "next start"
+   },
+   "dependencies": {
+      "next": "10.1.2",
+      "react": "17.0.2",
+      "react-dom": "17.0.2",
+      "react-is": "^16.8.0",
+      "styled-components": "^5.2.3"
+   },
+   "devDependencies": {
+      "babel-plugin-styled-components": "^1.12.0",
+      "prettier": "^2.2.1"
+   },
+   "prettier": {
+      "singleQuote": false,
+      "printWidth": 100,
+      "semi": true,
+      "bracketSpacing": true,
+      "jsxBracketSameLine": true,
+      "arrowParens": "avoid",
+      "trailingComma": "all",
+      "tabWidth": 3
+   },
+   "babel": {
+      "env": {
+         "development": {
+            "plugins": [
+               [
+                  "styled-components",
+                  {
+                     "ssr": true,
+                     "pure": true,
+                     "displayName": true,
+                     "preprocess": false
+                  }
+               ]
+            ],
+            "presets": [
+               "next/babel"
+            ]
+         },
+         "production": {
+            "plugins": [
+               [
+                  "styled-components",
+                  {
+                     "ssr": true,
+                     "pure": true,
+                     "displayName": true,
+                     "preprocess": false
+                  }
+               ]
+            ],
+            "presets": [
+               "next/babel"
+            ]
+         }
+      },
+      "plugins": [
+         [
+            "styled-components",
+            {
+               "ssr": true,
+               "pure": true,
+               "displayName": true,
+               "preprocess": false
+            }
+         ]
+      ]
+   }
 }

@@ -1,8 +1,0 @@
-{
-    "appService.zipIgnorePattern": [
-        "node_modules{,/**}",
-        ".vscode{,/**}"
-    ],
-    "appService.defaultWebAppToDeploy": "/subscriptions/6f79242e-8d1a-4448-ae43-269168d91b47/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/quarantina-v1",
-    "appService.deploySubpath": ""
-}
