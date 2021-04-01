@@ -92,8 +92,19 @@ export const TxtBox = styled.div`
    justify-content: space-between;
 `;
 
-export const Mic = styled.i`
-   margin-top: 3px;
+export const Mic = styled.button`
+   border: 0;
+   color: inherit;
+   background-color: #0000;
+
+   :hover {
+      transform: scale(1.025);
+   }
+
+   :focus {
+      border: 0;
+      outline: none;
+   }
 `;
 
 export const Txt = styled.textarea`
@@ -133,12 +144,11 @@ export const SendBtn = styled.button`
    transform: scale(1);
 
    :hover {
-      box-shadow: 3px 3px var(--purple);
+      transform: scale(1.025);
    }
 
    :focus {
       border: 0;
       outline: none;
-      transform: scale(1.025);
    }
 `;

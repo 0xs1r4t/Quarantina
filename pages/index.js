@@ -37,10 +37,10 @@ export default function Home() {
             </Msgs>
             <Send>
                <TxtBox>
-                  <Mic className="fas fa-microphone" />
-                  <Txt defaultValue="idk where to start lol" />
+                  <Mic className="fas fa-microphone" aria-label="start microphone" />
+                  <Txt defaultValue="idk where to start lol" aria-label="chatbox" />
                </TxtBox>
-               <SendBtn>send</SendBtn>
+               <SendBtn aria-label="send message">send</SendBtn>
             </Send>
          </ChatBg>
       </>
